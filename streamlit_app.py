@@ -4,6 +4,7 @@ import torch.nn as nn
 import numpy as np
 from PIL import Image
 import os # For checking if the model file exists
+st.set_page_config(page_title="MNIST Digit Generator", layout="centered")
 
 # --- 1. Define the Generator Model Architecture (MUST be identical to training) ---
 # Copy the Generator class definition directly from your training script
@@ -79,7 +80,7 @@ def generate_images(generator_model, digit, num_images, latent_dim, device):
     return pil_images
 
 # --- 5. Streamlit App Interface ---
-st.set_page_config(page_title="MNIST Digit Generator", layout="centered")
+# st.set_page_config(page_title="MNIST Digit Generator", layout="centered")
 
 st.title("🔢 MNIST Digit Generator")
 st.markdown("Generate 5 unique handwritten digits using a trained Conditional GAN.")
